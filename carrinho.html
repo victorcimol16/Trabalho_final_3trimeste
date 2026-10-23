@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sua sacola — OLYPORUS</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem('olyporus:tema'));document.documentElement.dataset.tema=t||(matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro');}catch(e){}</script>
+</head>
+<body data-pagina="carrinho">
+  <a class="sr-only" href="#conteudo">Pular para o conteúdo</a>
+  <div id="topo"></div>
+
+  <main id="conteudo" class="container">
+    <nav class="trilha" aria-label="Você está em"><a href="index.html">Início</a><span>›</span><span>Carrinho</span></nav>
+    <header style="padding:16px 0 32px">
+      <h1 class="titulo-display">Sua sacola</h1>
+      <p class="subtitulo" id="resumo-topo"></p>
+    </header>
+
+    <div class="carrinho" id="area-carrinho">
+      <section aria-label="Itens do carrinho">
+        <div id="lista-itens"></div>
+        <a class="link-acento" href="catalogo.html" style="display:inline-block;margin-top:24px">‹ Continuar comprando</a>
+      </section>
+
+      <aside class="painel resumo" aria-label="Resumo do pedido">
+        <h2>Resumo</h2>
+        <div class="resumo-linha"><span>Subtotal</span><span id="r-subtotal">—</span></div>
+        <div class="resumo-linha resumo-linha--desconto" id="linha-cupom" hidden><span id="r-cupom-nome">Cupom</span><span id="r-cupom">—</span></div>
+        <div class="resumo-linha"><span>Frete</span><span id="r-frete">Informe o CEP</span></div>
+
+        <p class="mensagem" id="msg-frete-gratis" style="margin-top:6px"></p>
+        <div class="barra-frete" aria-hidden="true"><div id="barra-frete" style="width:0"></div></div>
+
+        <label class="sr-only" for="cep-carrinho">CEP</label>
+        <form class="mini-form" id="form-cep">
+          <input id="cep-carrinho" inputmode="numeric" placeholder="CEP 00000-000" maxlength="9">
+          <button class="btn btn--escuro" type="submit">Calcular</button>
+        </form>
+        <div class="frete-escolha" id="frete-escolha"></div>
+
+        <label class="sr-only" for="cupom">Cupom de desconto</label>
+        <form class="mini-form" id="form-cupom">
+          <input id="cupom" placeholder="Cupom de desconto" autocomplete="off">
+          <button class="btn btn--contorno" type="submit">Aplicar</button>
+        </form>
+        <p class="mensagem" id="msg-cupom"></p>
+
+        <div class="resumo-linha resumo-linha--total"><span>Total</span><span id="r-total">—</span></div>
+        <p class="texto-sutil" style="font-size:.82rem;margin-bottom:14px" id="r-parcelas"></p>
+        <a class="btn btn--primario btn--grande btn--bloco" href="checkout.html" id="finalizar">Finalizar compra</a>
+        <p class="texto-sutil" style="font-size:.78rem;text-align:center;margin-top:10px">Pagamento simulado · Crédito, débito ou PIX</p>
+      </aside>
+    </div>
+  </main>
+
+  <div id="rodape"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/produtos.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/carrinho.js"></script>
+</body>
+</html>

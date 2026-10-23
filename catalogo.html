@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Catálogo — OLYPORUS</title>
+  <meta name="description" content="Catálogo OLYPORUS: cartas avulsas, boosters, coleções e acessórios de Pokémon TCG.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem('olyporus:tema'));document.documentElement.dataset.tema=t||(matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro');}catch(e){}</script>
+</head>
+<body data-pagina="catalogo">
+  <a class="sr-only" href="#conteudo">Pular para o conteúdo</a>
+  <div id="topo"></div>
+
+  <main id="conteudo" class="container">
+    <nav class="trilha" aria-label="Você está em">
+      <a href="index.html">Início</a><span>›</span><span id="trilha-atual">Catálogo</span>
+    </nav>
+
+    <header class="catalogo-topo">
+      <h1 class="titulo-display" id="titulo-catalogo">Todos os produtos</h1>
+      <p class="subtitulo" id="subtitulo-catalogo"></p>
+    </header>
+
+    <div class="chips" id="chips-categorias" style="margin-bottom:32px"></div>
+
+    <div class="catalogo">
+      <!-- FILTROS -->
+      <aside class="filtros" id="filtros" aria-label="Filtros">
+        <button class="icone-btn filtros__fechar" type="button" id="fechar-filtros" aria-label="Fechar filtros"></button>
+        <div>
+          <h2>Categoria</h2>
+          <div class="filtros__lista" id="filtro-categoria"></div>
+        </div>
+        <div>
+          <h2>Idioma</h2>
+          <div class="filtros__lista" id="filtro-idioma"></div>
+        </div>
+        <div>
+          <h2>Faixa de preço</h2>
+          <div class="filtros__preco">
+            <div class="campo"><label for="preco-min">Mínimo</label><input type="number" id="preco-min" min="0" step="10" placeholder="R$ 0"></div>
+            <div class="campo"><label for="preco-max">Máximo</label><input type="number" id="preco-max" min="0" step="10" placeholder="R$ 2.000"></div>
+          </div>
+        </div>
+        <div class="filtros__lista">
+          <label><input type="checkbox" id="filtro-promocao"> Somente promoções</label>
+          <label><input type="checkbox" id="filtro-estoque"> Últimas unidades</label>
+        </div>
+        <button class="btn btn--contorno" type="button" id="limpar-filtros">Limpar filtros</button>
+      </aside>
+
+      <!-- RESULTADOS -->
+      <section aria-live="polite">
+        <div class="catalogo__barra">
+          <button class="btn btn--contorno btn-filtros" type="button" id="abrir-filtros">Filtros</button>
+          <span id="contagem">—</span>
+          <label>
+            <span class="sr-only">Ordenar por</span>
+            <select id="ordenar">
+              <option value="relevancia">Ordenar: Mais relevantes</option>
+              <option value="menor-preco">Menor preço</option>
+              <option value="maior-preco">Maior preço</option>
+              <option value="avaliacao">Mais bem avaliados</option>
+              <option value="nome">Nome (A–Z)</option>
+            </select>
+          </label>
+        </div>
+        <div class="grade-produtos" id="grade-catalogo"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="rodape"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/produtos.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/catalogo.js"></script>
+</body>
+</html>

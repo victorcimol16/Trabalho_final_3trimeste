@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OLYPORUS — Cartas e colecionáveis Pokémon TCG</title>
+  <meta name="description" content="OLYPORUS: cartas avulsas, boosters, Elite Trainer Box e acessórios de Pokémon TCG com curadoria e envio protegido.">
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Aplica o tema salvo antes de desenhar a página (evita a tela "piscar") -->
+  <script>try{var t=JSON.parse(localStorage.getItem('olyporus:tema'));document.documentElement.dataset.tema=t||(matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro');}catch(e){}</script>
+</head>
+<body data-pagina="home">
+  <a class="sr-only" href="#conteudo">Pular para o conteúdo</a>
+  <div id="topo"></div>
+
+  <main id="conteudo">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero__texto revelar">
+        <p class="eyebrow">Novo lançamento</p>
+        <h1 class="titulo-display">Scarlet &amp; Violet</h1>
+        <p class="subtitulo">A coleção definitiva chegou.</p>
+        <div class="hero__acoes">
+          <a class="btn btn--primario btn--grande" href="produto.html?id=etb-scarlet-violet">Comprar</a>
+          <a class="btn btn--link" href="catalogo.html?categoria=colecoes">Saiba mais ›</a>
+        </div>
+      </div>
+      <div class="hero__imagem revelar">
+        <img src="img/cartas/riolu.webp" alt="Carta Riolu em ilustração rara" width="524" height="720">
+      </div>
+    </section>
+
+    <!-- CATEGORIAS -->
+    <section class="secao" aria-labelledby="titulo-categorias">
+      <div class="container">
+        <div class="secao__topo revelar">
+          <div>
+            <h2 class="titulo-secao" id="titulo-categorias">Compre por categoria.</h2>
+            <p class="subtitulo">Tudo o que um treinador precisa.</p>
+          </div>
+          <a class="link-acento" href="catalogo.html">Ver todos os produtos ›</a>
+        </div>
+        <div class="grade-categorias" id="grade-categorias"></div>
+      </div>
+    </section>
+
+    <!-- MAIS VENDIDOS -->
+    <section class="secao secao--cinza" aria-labelledby="titulo-destaques">
+      <div class="container">
+        <div class="secao__topo revelar">
+          <div>
+            <h2 class="titulo-secao" id="titulo-destaques">Mais vendidos.</h2>
+            <p class="subtitulo">Escolhidos pela comunidade esta semana.</p>
+          </div>
+          <a class="link-acento" href="catalogo.html?ordenar=avaliacao">Ver mais ›</a>
+        </div>
+        <div class="grade-produtos" id="grade-destaques"></div>
+      </div>
+    </section>
+
+    <!-- DESTAQUE ESCURO -->
+    <section class="secao destaque-escuro" aria-labelledby="titulo-destaque">
+      <div class="container destaque-escuro__grade">
+        <img class="revelar" src="img/cartas/charizard-ex-chamas-obsidianas.webp" alt="Carta Charizard ex em português" width="480" height="660" loading="lazy">
+        <div class="destaque-escuro__texto revelar">
+          <p class="eyebrow">A mais procurada</p>
+          <h2 class="titulo-display" id="titulo-destaque">Charizard ex</h2>
+          <p class="subtitulo">Arte completa. Edição em português. Conferida pela nossa curadoria.</p>
+          <p class="destaque-escuro__preco" id="preco-destaque"></p>
+          <div class="hero__acoes">
+            <button class="btn btn--primario" type="button" data-adicionar="charizard-ex-chamas-obsidianas">Adicionar ao carrinho</button>
+            <a class="link-acento" href="produto.html?id=charizard-ex-chamas-obsidianas">Ver detalhes ›</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLEÇÕES (carrossel) -->
+    <section class="secao" aria-labelledby="titulo-colecoes">
+      <div class="container">
+        <div class="secao__topo revelar">
+          <div>
+            <h2 class="titulo-secao" id="titulo-colecoes">Coleções.</h2>
+            <p class="subtitulo">Explore por série. Role para o lado.</p>
+          </div>
+          <div class="carrossel__setas">
+            <button type="button" id="carrossel-anterior" aria-label="Coleções anteriores">‹</button>
+            <button type="button" id="carrossel-proximo" aria-label="Próximas coleções">›</button>
+          </div>
+        </div>
+        <div class="carrossel">
+          <div class="carrossel__trilho" id="carrossel" tabindex="0" aria-label="Lista de coleções"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUAL É PARA VOCÊ -->
+    <section class="secao secao--cinza" aria-labelledby="titulo-comparacao">
+      <div class="container">
+        <div class="revelar" style="text-align:center;margin-bottom:40px">
+          <h2 class="titulo-secao" id="titulo-comparacao">Qual é para você?</h2>
+          <p class="subtitulo">Três formas de começar sua coleção.</p>
+        </div>
+        <div class="comparacao">
+          <article class="comparacao__item revelar">
+            <div class="midia midia--caixa"><img src="img/produtos/booster-equilibrio-perfeito.webp" alt="Booster" loading="lazy"></div>
+            <h3>Booster</h3>
+            <p class="texto-sutil">Para quem quer a emoção da sorte.</p>
+            <ul><li>10 cartas sortidas</li><li>Lacrado de fábrica</li><li>Chance de carta rara</li></ul>
+            <p>A partir de <strong>R$ 44,90</strong></p>
+            <a class="link-acento" href="catalogo.html?categoria=boosters">Comprar ›</a>
+          </article>
+          <article class="comparacao__item revelar">
+            <div class="midia midia--caixa"><img src="img/produtos/etb-perfect-order.webp" alt="Elite Trainer Box" loading="lazy"></div>
+            <h3>Elite Trainer Box</h3>
+            <p class="texto-sutil">Para quem quer jogar de verdade.</p>
+            <ul><li>9 boosters + acessórios</li><li>Dados, marcadores e sleeves</li><li>Caixa colecionável</li></ul>
+            <p>A partir de <strong>R$ 399,90</strong></p>
+            <a class="link-acento" href="catalogo.html?categoria=colecoes">Comprar ›</a>
+          </article>
+          <article class="comparacao__item revelar">
+            <div class="midia midia--carta"><img src="img/cartas/mew-ex-dourada.webp" alt="Carta avulsa" loading="lazy"></div>
+            <h3>Carta avulsa</h3>
+            <p class="texto-sutil">Para quem quer a peça certa.</p>
+            <ul><li>Escolha exatamente a carta</li><li>Condição conferida</li><li>Envio com proteção tripla</li></ul>
+            <p>A partir de <strong>R$ 34,90</strong></p>
+            <a class="link-acento" href="catalogo.html?categoria=cartas">Comprar ›</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CUPOM -->
+    <section class="secao">
+      <div class="container">
+        <div class="faixa-cupom revelar">
+          <div>
+            <h2>Primeira compra? Ganhe 10% off.</h2>
+            <p>Use o cupom no carrinho. Válido para todos os produtos.</p>
+          </div>
+          <code>OLY10</code>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="rodape"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/produtos.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/paginas/home.js"></script>
+</body>
+</html>

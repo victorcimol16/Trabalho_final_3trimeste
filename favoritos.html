@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Favoritos — OLYPORUS</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <script>try{var t=JSON.parse(localStorage.getItem('olyporus:tema'));document.documentElement.dataset.tema=t||(matchMedia('(prefers-color-scheme: dark)').matches?'escuro':'claro');}catch(e){}</script>
+</head>
+<body data-pagina="favoritos">
+  <a class="sr-only" href="#conteudo">Pular para o conteúdo</a>
+  <div id="topo"></div>
+
+  <main id="conteudo" class="container" style="padding-bottom:96px">
+    <nav class="trilha" aria-label="Você está em"><a href="index.html">Início</a><span>›</span><span>Favoritos</span></nav>
+    <header style="padding:16px 0 32px">
+      <h1 class="titulo-display">Favoritos</h1>
+      <p class="subtitulo" id="subtitulo-favoritos"></p>
+    </header>
+    <div class="grade-produtos" id="grade-favoritos"></div>
+  </main>
+
+  <div id="rodape"></div>
+
+  <script src="js/utils.js"></script>
+  <script src="js/produtos.js"></script>
+  <script src="js/carrinho.js"></script>
+  <script src="js/layout.js"></script>
+  <script>
+    /* Lista os produtos salvos com o coração. Ao desfavoritar, a lista se atualiza. */
+    function renderizarFavoritos() {
+      const produtos = listarFavoritos().map(buscarProdutoPorId).filter(Boolean);
+      const grade = document.getElementById('grade-favoritos');
+      document.getElementById('subtitulo-favoritos').textContent = produtos.length
+        ? produtos.length + (produtos.length === 1 ? ' produto salvo.' : ' produtos salvos.')
+        : '';
+      if (!produtos.length) {
+        grade.innerHTML = '<div class="vazio" style="grid-column:1/-1"><div class="vazio__icone">' + ICONES.coracao + '</div>' +
+          '<h2>Nenhum favorito ainda</h2><p>Toque no coração dos produtos para guardar aqui e acompanhar os preços.</p>' +
+          '<a class="btn btn--primario" href="catalogo.html">Explorar produtos</a></div>';
+        return;
+      }
+      grade.innerHTML = produtos.map(cardProdutoHtml).join('');
+      ativarAnimacoes(grade);
+    }
+    document.addEventListener('DOMContentLoaded', renderizarFavoritos);
+    document.addEventListener('favoritos-alterados', renderizarFavoritos);
+  </script>
+</body>
+</html>

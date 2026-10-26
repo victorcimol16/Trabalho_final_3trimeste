@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="70 95 460 400">
+  <!-- Ilustração própria: fichário (pasta) de 9 bolsos aberto -->
+  <rect x="80" y="130" width="440" height="330" rx="20" fill="#212121"/>
+  <rect x="96" y="146" width="200" height="298" rx="10" fill="#2C2C2E"/>
+  <rect x="304" y="146" width="200" height="298" rx="10" fill="#2C2C2E"/>
+  <rect x="294" y="130" width="12" height="330" fill="#3466AF"/>
+  <g fill="#3A3A3C" stroke="#4A4A4E" stroke-width="2">
+    <rect x="108" y="158" width="56" height="84" rx="5"/><rect x="172" y="158" width="56" height="84" rx="5"/><rect x="236" y="158" width="52" height="84" rx="5"/>
+    <rect x="108" y="252" width="56" height="84" rx="5"/><rect x="172" y="252" width="56" height="84" rx="5"/><rect x="236" y="252" width="52" height="84" rx="5"/>
+    <rect x="108" y="346" width="56" height="84" rx="5"/><rect x="172" y="346" width="56" height="84" rx="5"/><rect x="236" y="346" width="52" height="84" rx="5"/>
+    <rect x="316" y="158" width="52" height="84" rx="5"/><rect x="376" y="158" width="56" height="84" rx="5"/><rect x="440" y="158" width="56" height="84" rx="5"/>
+    <rect x="316" y="252" width="52" height="84" rx="5"/><rect x="376" y="252" width="56" height="84" rx="5"/><rect x="440" y="252" width="56" height="84" rx="5"/>
+    <rect x="316" y="346" width="52" height="84" rx="5"/><rect x="376" y="346" width="56" height="84" rx="5"/><rect x="440" y="346" width="56" height="84" rx="5"/>
+  </g>
+  <rect x="172" y="158" width="56" height="84" rx="5" fill="#6FA0EE"/>
+  <rect x="376" y="252" width="56" height="84" rx="5" fill="#FFCC00"/>
+  <rect x="108" y="346" width="56" height="84" rx="5" fill="#E8F0FC"/>
+</svg>

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="140 130 340 360">
+  <!-- Ilustração própria: deck box (caixa para baralho) OLYPORUS -->
+  <path d="M190 200 L300 150 L430 190 L320 245 Z" fill="#3A3A3C"/>
+  <path d="M190 200 L320 245 L320 470 L190 420 Z" fill="#212121"/>
+  <path d="M320 245 L430 190 L430 415 L320 470 Z" fill="#2C2C2E"/>
+  <path d="M190 200 L320 245 L320 290 L190 245 Z" fill="#3466AF"/>
+  <path d="M320 245 L430 190 L430 235 L320 290 Z" fill="#244B85"/>
+  <circle cx="255" cy="345" r="40" fill="#fff"/>
+  <path d="M215 345h80" stroke="#212121" stroke-width="8"/>
+  <circle cx="255" cy="345" r="13" fill="#fff" stroke="#212121" stroke-width="6"/>
+  <text x="255" y="425" font-family="Poppins, Arial, sans-serif" font-size="20" font-weight="700" fill="#fff" text-anchor="middle" transform="skewY(19) translate(0 -88)">OLYPORUS</text>
+</svg>
